@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: cmcio-frontend
-        image: ghcr.io/sergioanastacio/cmcio-frontend:latest
+        image: ghcr.io/sergioanastacio/cmcio-frontend:
         ports:
         - containerPort: 80
         resources:
