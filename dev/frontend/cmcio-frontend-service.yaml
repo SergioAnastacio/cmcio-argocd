@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cmcio-frontend-service
+  namespace: dev  # Asegúrate de que el namespace sea 'dev'
+spec:
+  selector:
+    app: cmcio-frontend
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80

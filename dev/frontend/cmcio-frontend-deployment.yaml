@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cmcio-frontend-deployment
+  namespace: dev  # Asegúrate de que el namespace sea 'dev'
+  labels: 
+    app: cmcio-frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: cmcio-frontend
+  template:
+    metadata:
+      labels:
+        app: cmcio-frontend
+    spec:
+      containers:
+      - name: cmcio-frontend
+        image: ghcr.io/sergioanastacio/cmcio-frontend:latest
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+        securityContext:
+          runAsNonRoot: true
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+            - ALL
