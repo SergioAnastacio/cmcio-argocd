@@ -6,7 +6,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: lb-cmcio-522211967.us-west-1.elb.amazonaws.com  # provicionalmente el registro A del load balancer
+  - host: lb-cmcio-1852447122.us-west-1.elb.amazonaws.com  # provicionalmente el registro A del load balancer
     http:
       paths:
       - path: /
