@@ -2,11 +2,11 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: cmcio-frontend-ingress
-  namespace: dev  # Asegúrate de que el namespace sea 'dev'
+  namespace: dev 
 spec:
   ingressClassName: cmcio-frontend
   rules:
-  - host: k8s-load-balancer-676717229.us-west-1.elb.amazonaws.com  # Añade el host aquí
+  - host: lb-cmcio-1397561919.us-west-1.elb.amazonaws.com  # provicionalmente el registro A del load balancer
     http:
       paths:
       - path: /

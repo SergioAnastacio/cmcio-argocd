@@ -7,9 +7,9 @@ spec:
   project: default
   
   source:
-    repoURL: https://github.com/SergioAnastacio/test-frontend
+    repoURL: https://github.com/SergioAnastacio/cmcio-argocd
     targetRevision: HEAD
-    path: dev
+    path: dev/frontend
   
   destination:
     server: 'https://kubernetes.default.svc'
