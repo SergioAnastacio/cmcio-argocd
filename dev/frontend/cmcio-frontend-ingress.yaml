@@ -4,6 +4,7 @@ metadata:
   name: cmcio-frontend-ingress
   namespace: dev 
 spec:
+  ingressClassName: cmcio-frontend
   rules:
   - host: lb-cmcio-1397561919.us-west-1.elb.amazonaws.com  # provicionalmente el registro A del load balancer
     http:
