@@ -10,7 +10,9 @@ spec:
   - protocol: TCP
     port: 8080
     targetPort: 8080
+    nodePort: 31080  # Puedes especificar un puerto en el rango 30000-32767
   - protocol: TCP
     port: 8081
     targetPort: 8081
-  type: ClusterIP
+    nodePort: 31081  # Puedes especificar un puerto en el rango 30000-32767
+  type: NodePort
