@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cmcio-backend-service
+  namespace: dev  
+spec:
+  selector:
+    app: cmcio-backend
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
+  - protocol: TCP
+    port: 8081
+    targetPort: 8081
+  type: ClusterIP

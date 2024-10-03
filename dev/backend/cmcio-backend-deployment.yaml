@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cmcio-backend-deployment
+  namespace: dev  
+  labels: 
+    app: cmcio-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cmcio-backend
+  template:
+    metadata:
+      labels:
+        app: cmcio-backend
+    spec:
+      containers:
+      - name: cmcio-backend
+        image: ghcr.io/sergioanastacio/cmcio-backend:1.0.0
+        ports:
+        - containerPort: 8080
+        - containerPort: 8081
