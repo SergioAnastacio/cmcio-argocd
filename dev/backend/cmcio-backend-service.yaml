@@ -10,9 +10,9 @@ spec:
   - protocol: TCP
     port: 8080
     targetPort: 8080
-    nodePort: 30100  # Puedes especificar un puerto en el rango 30000-32767
+    nodePort: 30100
   - protocol: TCP
     port: 8081
     targetPort: 8081
-    nodePort: 30101  # Puedes especificar un puerto en el rango 30000-32767
+    nodePort: 30101
   type: NodePort
