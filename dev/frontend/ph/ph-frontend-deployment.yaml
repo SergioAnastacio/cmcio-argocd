@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: ph-frontend
-        image: ghcr.io/sergioanastacio/ph-frontend:1.0.0
+        image: ghcr.io/sergioanastacio/ph-frontend:0.1.0
         ports:
         - containerPort: 3000
