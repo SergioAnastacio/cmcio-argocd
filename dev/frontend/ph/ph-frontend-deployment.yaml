@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ph-frontend-deployment
+  namespace: dev  
+  labels: 
+    app: ph-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ph-frontend
+  template:
+    metadata:
+      labels:
+        app: ph-frontend
+    spec:
+      containers:
+      - name: ph-frontend
+        image: ghcr.io/sergioanastacio/ph-frontend:1.0.0
+        ports:
+        - containerPort: 3000
